@@ -145,7 +145,7 @@ start_heartbeat_timeout (CbUserStream *self)
   if (self->heartbeat_timeout_id != 0)
     return;
 
-  self->heartbeat_timeout_id = g_timeout_add (45 * 1000, heartbeat_cb, self);
+  self->heartbeat_timeout_id = g_timeout_add (120 * 1000, heartbeat_cb, self);
 }
 
 static void
