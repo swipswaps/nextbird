@@ -18,7 +18,8 @@ Please do not pester the original author with those problems
 it’s his good right to be done with the project.
 
 
-[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=baedert&url=http://github.com/baedert/corebird&title=corebird&language=vala&tags=github&category=software) [![Supprt Corebird on Patreon](https://baedert.org/patreon-donate-yellow.svg)](https://patreon.com/baedert)
+[![Flattr the original repository](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=baedert&url=http://github.com/baedert/corebird&title=corebird&language=vala&tags=github&category=software)
+[![Support the original author on Patreon](https://baedert.org/patreon-donate-yellow.svg)](https://patreon.com/baedert)
 
 ## Shortcuts
 
