@@ -1,7 +1,21 @@
 # Corebird 1.7.4
 
-**Corebird will stop working mid-August: https://www.patreon.com/posts/corebirds-future-18921328**
+**This is a “life support” *fork* of Corebird.**
 
+In mid-August 2018, Twitter removed support for “streaming services”,
+which means that Corebird can no longer receive push notifications or automatically refresh timelines as soon as new tweets arrive.
+Since Twitter offers no viable alternative to the removed API,
+the Corebird creator sees no future for the app:
+see [this post](https://www.patreon.com/posts/corebirds-future-18921328) for more information.
+
+Some Corebird users, on the other hand, wish to keep using Corebird:
+even in its broken form, they prefer it to Twitter’s native clients.
+This fork therefore aims to collect patches to improve the Corebird experience as much as possible.
+Beware that the maintainers of this fork are not very familiar with the Corebird codebase,
+and may introduce new bugs while trying to fix other problems.
+Please do not pester the original author with those problems
+(or, at this point, with any other problems in Corebird) –
+it’s his good right to be done with the project.
 
 
 [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=baedert&url=http://github.com/baedert/corebird&title=corebird&language=vala&tags=github&category=software) [![Supprt Corebird on Patreon](https://baedert.org/patreon-donate-yellow.svg)](https://patreon.com/baedert)
