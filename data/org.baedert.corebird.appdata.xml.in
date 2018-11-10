@@ -14,7 +14,7 @@
    Additional features include local viewing of videos, multiple inline images, Lists, Filters, multiple accounts, etc.
   </p>
   </description>
-  <url type="homepage">https://corebird.baedert.org/</url>
+  <url type="homepage">https://github.com/lucaswerkmeister/corebird</url>
   <screenshots>
     <screenshot height="450" width="800" type="default">
       <image>https://corebird.baedert.org/appdata/1.5/1.png</image>
@@ -40,7 +40,7 @@
 
   <developer_name>Timm Bäder</developer_name>
 
-  <url type="bugtracker">https://github.com/baedert/corebird/issues</url>
+  <url type="bugtracker">https://github.com/lucaswerkmeister/corebird/issues</url>
 
   <url type="donation">https://flattr.com/profile/baedert</url>
 
