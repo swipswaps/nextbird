@@ -1,5 +1,5 @@
 project('Corebird', ['vala', 'c'],
-        version: '1.7.4.1',
+        version: '1.7.4.2',
         default_options: [
           'buildtype=debug'
         ])
