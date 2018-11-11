@@ -15,7 +15,7 @@
  *  along with corebird.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-[GtkTemplate (ui = "/org/baedert/corebird/ui/account-dialog.ui")]
+[GtkTemplate (ui = "/de/lucaswerkmeister/corebird/ui/account-dialog.ui")]
 public class AccountDialog : Gtk.Window {
   private const int MAX_DESCRIPTION_LENGTH = 160;
   private const string PAGE_NORMAL = "normal";

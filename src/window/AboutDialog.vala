@@ -16,7 +16,7 @@
  */
 
 
-[GtkTemplate (ui = "/org/baedert/corebird/ui/about-dialog.ui")]
+[GtkTemplate (ui = "/de/lucaswerkmeister/corebird/ui/about-dialog.ui")]
 class AboutDialog : Gtk.AboutDialog {
   [GtkCallback]
   private void response_cb (int id) {

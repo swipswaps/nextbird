@@ -15,7 +15,7 @@
  *  along with corebird.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-[GtkTemplate (ui = "/org/baedert/corebird/ui/account-create-widget.ui")]
+[GtkTemplate (ui = "/de/lucaswerkmeister/corebird/ui/account-create-widget.ui")]
 class AccountCreateWidget : Gtk.Box {
   [GtkChild]
   private Gtk.Entry pin_entry;

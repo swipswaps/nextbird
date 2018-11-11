@@ -15,7 +15,7 @@
  *  along with corebird.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-[GtkTemplate (ui = "/org/baedert/corebird/ui/list-list-entry.ui")]
+[GtkTemplate (ui = "/de/lucaswerkmeister/corebird/ui/list-list-entry.ui")]
 public class ListListEntry : Gtk.ListBoxRow {
   public static int sort_func (Gtk.ListBoxRow r1,
                                Gtk.ListBoxRow r2) {

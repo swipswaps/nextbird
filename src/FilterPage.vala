@@ -15,7 +15,7 @@
  *  along with corebird.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-[GtkTemplate (ui = "/org/baedert/corebird/ui/filter-page.ui")]
+[GtkTemplate (ui = "/de/lucaswerkmeister/corebird/ui/filter-page.ui")]
 class FilterPage : Gtk.ScrolledWindow, IPage, Cb.MessageReceiver {
   public int id { get; set; }
   private unowned MainWindow main_window;

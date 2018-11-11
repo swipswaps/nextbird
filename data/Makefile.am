@@ -2,11 +2,11 @@ iconprefix=$(datarootdir)/icons/hicolor/
 SUBDIRS = hicolor
 
 desktopdir = $(datarootdir)/applications
-desktop_in_files = org.baedert.corebird.desktop.in
+desktop_in_files = de.lucaswerkmeister.corebird.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 
 appdatadir = $(datarootdir)/metainfo
-appdata_in_files = org.baedert.corebird.appdata.xml.in
+appdata_in_files = de.lucaswerkmeister.corebird.appdata.xml.in
 appdata_DATA = $(appdata_in_files:.xml.in=.xml)
 
 %.desktop: %.desktop.in
@@ -19,7 +19,7 @@ appdata_DATA = $(appdata_in_files:.xml.in=.xml)
 
 man_MANS = corebird.1
 
-gsettings_SCHEMAS = org.baedert.corebird.gschema.xml
+gsettings_SCHEMAS = de.lucaswerkmeister.corebird.gschema.xml
 @GSETTINGS_RULES@
 
 gschemas.compiled: Makefile $(gsettings_SCHEMAS:.xml=.valid)
@@ -27,11 +27,11 @@ gschemas.compiled: Makefile $(gsettings_SCHEMAS:.xml=.valid)
 
 
 dbusservicedir = $(datadir)/dbus-1/services
-dbusservice_DATA = org.baedert.corebird.service
+dbusservice_DATA = de.lucaswerkmeister.corebird.service
 
-org.baedert.corebird.service: Makefile
+de.lucaswerkmeister.corebird.service: Makefile
 	$(AM_V_GEN) (echo '[D-BUS Service]'; \
-		echo 'Name=org.baedert.corebird'; \
+		echo 'Name=de.lucaswerkmeister.corebird'; \
 		echo 'Exec=${bindir}/corebird --gapplication-service') > $@.tmp && \
 		mv $@.tmp $@
 
@@ -39,12 +39,12 @@ org.baedert.corebird.service: Makefile
 EXTRA_DIST = \
 	$(desktop_in_files) \
 	$(appdata_in_files) \
-	org.baedert.corebird.gschema.xml \
+	de.lucaswerkmeister.corebird.gschema.xml \
 	$(man_MANS)
 
 CLEANFILES = \
 	gschemas.compiled \
-	org.baedert.corebird.gschema.valid \
+	de.lucaswerkmeister.corebird.gschema.valid \
 	$(desktop_DATA) \
 	$(dbusservice_DATA) \
 	$(appdata_DATA)

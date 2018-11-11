@@ -15,7 +15,7 @@
  *  along with corebird.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-[GtkTemplate (ui = "/org/baedert/corebird/ui/compose-window.ui")]
+[GtkTemplate (ui = "/de/lucaswerkmeister/corebird/ui/compose-window.ui")]
 class ComposeTweetWindow : Gtk.ApplicationWindow {
   const int DEFAULT_WIDTH = 450;
   public enum Mode {

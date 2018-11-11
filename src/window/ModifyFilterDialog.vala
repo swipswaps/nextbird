@@ -14,7 +14,7 @@
  *  You should have received a copy of the GNU General Public License
  *  along with corebird.  If not, see <http://www.gnu.org/licenses/>.
  */
-[GtkTemplate (ui = "/org/baedert/corebird/ui/modify-filter-dialog.ui")]
+[GtkTemplate (ui = "/de/lucaswerkmeister/corebird/ui/modify-filter-dialog.ui")]
 class ModifyFilterDialog : Gtk.Dialog {
   [GtkChild]
   private Gtk.Entry regex_entry;

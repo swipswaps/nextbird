@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2013 Ryan Lerch <ryanlerch@fedoraproject.org> -->
 <component type="desktop">
-  <id>org.baedert.corebird.desktop</id>
+  <id>de.lucaswerkmeister.corebird.desktop</id>
   <name>Corebird</name>
   <summary>Twitter Client</summary>
   <metadata_license>CC0-1.0</metadata_license>

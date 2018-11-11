@@ -18,57 +18,57 @@ msgstr ""
 "Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: data/org.baedert.corebird.appdata.xml.in:5
-#: data/org.baedert.corebird.desktop.in:3
+#: data/de.lucaswerkmeister.corebird.appdata.xml.in:5
+#: data/de.lucaswerkmeister.corebird.desktop.in:3
 msgid "Corebird"
 msgstr "Corebird"
 
-#: data/org.baedert.corebird.appdata.xml.in:6
-#: data/org.baedert.corebird.desktop.in:4
+#: data/de.lucaswerkmeister.corebird.appdata.xml.in:6
+#: data/de.lucaswerkmeister.corebird.desktop.in:4
 msgid "Twitter Client"
 msgstr "Twitter用戶端"
 
-#: data/org.baedert.corebird.appdata.xml.in:10
+#: data/de.lucaswerkmeister.corebird.appdata.xml.in:10
 msgid ""
 "Corebird is a native GTK+ twitter client that provides vital features such "
 "as Direct Messages (DMs), tweet notifications, conversation views."
 msgstr "Corebird 是原生的 GTK+ Twitter 用戶端，具有訊息、推文通知、以對話形式檢視回覆等等功能。"
 
-#: data/org.baedert.corebird.appdata.xml.in:13
+#: data/de.lucaswerkmeister.corebird.appdata.xml.in:13
 msgid ""
 "Additional features include local viewing of videos, multiple inline images,"
 " Lists, Filters, multiple accounts, etc."
 msgstr "其他功能包括直接觀賞影片、顯示多張影像、列表、過濾器及多重帳戶登入等等。"
 
-#: data/org.baedert.corebird.appdata.xml.in:21
+#: data/de.lucaswerkmeister.corebird.appdata.xml.in:21
 msgid "Generic timeline view when using Corebird"
 msgstr "使用 Corebird 以時間軸方式瀏覽"
 
-#: data/org.baedert.corebird.appdata.xml.in:25
+#: data/de.lucaswerkmeister.corebird.appdata.xml.in:25
 msgid "Typical Twitter profile"
 msgstr "典型的 Twitter 個人檔案"
 
-#: data/org.baedert.corebird.appdata.xml.in:29
+#: data/de.lucaswerkmeister.corebird.appdata.xml.in:29
 msgid "Account settings can be configured"
 msgstr "可以設定帳戶資料"
 
-#: data/org.baedert.corebird.appdata.xml.in:41
+#: data/de.lucaswerkmeister.corebird.appdata.xml.in:41
 msgid "Timm Bäder"
 msgstr ""
 
-#: data/org.baedert.corebird.desktop.in:5
+#: data/de.lucaswerkmeister.corebird.desktop.in:5
 msgid "Use Twitter from within a normal desktop application"
 msgstr "在普通的桌面應用程式內使用 Twitter"
 
 #. TRANSLATORS: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: data/org.baedert.corebird.desktop.in:7
+#: data/de.lucaswerkmeister.corebird.desktop.in:7
 msgid "twitter;"
 msgstr "twitter;"
 
 #. TRANSLATORS: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: data/org.baedert.corebird.desktop.in:11
+#: data/de.lucaswerkmeister.corebird.desktop.in:11
 msgid "corebird"
 msgstr "corebird"
 

@@ -15,7 +15,7 @@
  *  along with corebird.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-[GtkTemplate (ui = "/org/baedert/corebird/ui/tweet-list-entry.ui")]
+[GtkTemplate (ui = "/de/lucaswerkmeister/corebird/ui/tweet-list-entry.ui")]
 public class TweetListEntry : Cb.TwitterItem, Gtk.ListBoxRow {
   private const GLib.ActionEntry[] action_entries = {
     {"quote", quote_activated},

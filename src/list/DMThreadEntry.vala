@@ -15,7 +15,7 @@
  *  along with corebird.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-[GtkTemplate (ui = "/org/baedert/corebird/ui/dm-thread-entry.ui")]
+[GtkTemplate (ui = "/de/lucaswerkmeister/corebird/ui/dm-thread-entry.ui")]
 class DMThreadEntry : Gtk.ListBoxRow {
   [GtkChild]
   private Gtk.Label name_label;

@@ -25,7 +25,7 @@ public class Settings : GLib.Object {
   private static GLib.Settings settings;
 
   public static void init(){
-    settings = new GLib.Settings("org.baedert.corebird");
+    settings = new GLib.Settings("de.lucaswerkmeister.corebird");
   }
 
   public static new GLib.Settings get () {

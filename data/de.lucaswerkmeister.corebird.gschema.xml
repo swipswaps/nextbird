@@ -1,5 +1,5 @@
 <schemalist>
-  <enum id="org.baedert.corebird.tweet-stack">
+  <enum id="de.lucaswerkmeister.corebird.tweet-stack">
     <value nick="Never"    value="0"  />
     <value nick="Every"    value="1"  />
     <value nick="Stack 5"  value="5"  />
@@ -8,15 +8,15 @@
     <value nick="Stack 50" value="50" />
   </enum>
 
-  <enum id="org.baedert.corebird.media-visibility">
+  <enum id="de.lucaswerkmeister.corebird.media-visibility">
     <value nick="Show" value="1" />
     <value nick="Hide" value="2" />
     <value nick="Hide in Timeline" value="3" />
 
   </enum>
 
-  <schema id="org.baedert.corebird"
-      path="/org/baedert/corebird/"
+  <schema id="de.lucaswerkmeister.corebird"
+      path="/de/lucaswerkmeister/corebird/"
       gettext-domain="corebird">
 
     <key name="use-dark-theme" type="b">
@@ -25,7 +25,7 @@
       <description></description>
     </key>
 
-    <key name="new-tweets-notify" enum="org.baedert.corebird.tweet-stack">
+    <key name="new-tweets-notify" enum="de.lucaswerkmeister.corebird.tweet-stack">
       <default>"Never"</default>
       <summary>If/when the user should be notified about new tweets</summary>
       <description>
@@ -110,7 +110,7 @@
       <default>true</default>
       <summary>Whether to hide images marked as inappropriate by default or not</summary>
     </key>
-    <key name="media-visibility" enum="org.baedert.corebird.media-visibility">
+    <key name="media-visibility" enum="de.lucaswerkmeister.corebird.media-visibility">
       <default>"Show"</default>
       <summary>When to show media attached to tweets</summary>
     </key>

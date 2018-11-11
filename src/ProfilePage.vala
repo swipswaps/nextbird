@@ -15,7 +15,7 @@
  *  along with corebird.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-[GtkTemplate (ui = "/org/baedert/corebird/ui/profile-page.ui")]
+[GtkTemplate (ui = "/de/lucaswerkmeister/corebird/ui/profile-page.ui")]
 class ProfilePage : ScrollWidget, IPage, Cb.MessageReceiver {
   private const GLib.ActionEntry[] action_entries = {
     {"write-dm", write_dm_activated},

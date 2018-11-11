@@ -15,7 +15,7 @@
  *  along with corebird.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-[GtkTemplate (ui = "/org/baedert/corebird/ui/new-list-entry.ui")]
+[GtkTemplate (ui = "/de/lucaswerkmeister/corebird/ui/new-list-entry.ui")]
 class NewListEntry : Gtk.ListBoxRow {
   [GtkChild]
   private Gtk.Entry list_name_entry;

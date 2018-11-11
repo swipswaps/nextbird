@@ -45,7 +45,7 @@ public class Corebird : Gtk.Application {
 
 
   public Corebird () {
-    GLib.Object(application_id:   "org.baedert.corebird",
+    GLib.Object(application_id:   "de.lucaswerkmeister.corebird",
                 flags:            ApplicationFlags.HANDLES_COMMAND_LINE);
                 //register_session: true);
     active_accounts = new GLib.GenericArray<Account> ();
@@ -188,14 +188,14 @@ public class Corebird : Gtk.Application {
   }
 
   private void show_shortcuts_activated () {
-    var builder = new Gtk.Builder.from_resource ("/org/baedert/corebird/ui/shortcuts-window.ui");
+    var builder = new Gtk.Builder.from_resource ("/de/lucaswerkmeister/corebird/ui/shortcuts-window.ui");
     var shortcuts_window = (Gtk.Window) builder.get_object ("shortcuts_window");
     shortcuts_window.show ();
   }
 
   public override void startup () {
     base.startup ();
-    this.set_resource_base_path ("/org/baedert/corebird");
+    this.set_resource_base_path ("/de/lucaswerkmeister/corebird");
 
     typeof (LazyMenuButton).ensure ();
     typeof (FavImageView).ensure ();

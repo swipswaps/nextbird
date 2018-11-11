@@ -15,7 +15,7 @@
  *  along with corebird.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-[GtkTemplate (ui = "/org/baedert/corebird/ui/media-dialog.ui")]
+[GtkTemplate (ui = "/de/lucaswerkmeister/corebird/ui/media-dialog.ui")]
 class MediaDialog : Gtk.Window {
   [GtkChild]
   private Gtk.Frame frame;

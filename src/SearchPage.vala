@@ -15,7 +15,7 @@
  *  along with corebird.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-[GtkTemplate (ui = "/org/baedert/corebird/ui/search-page.ui")]
+[GtkTemplate (ui = "/de/lucaswerkmeister/corebird/ui/search-page.ui")]
 class SearchPage : IPage, Gtk.Box {
   public const int KEY_QUERY = 0;
   private const int USER_COUNT = 3;

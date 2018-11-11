@@ -1,22 +1,22 @@
 i18n = import('i18n')
 
 install_data(
-  'org.baedert.corebird.gschema.xml',
+  'de.lucaswerkmeister.corebird.gschema.xml',
   install_dir: join_paths(get_option('datadir'), 'glib-2.0', 'schemas')
 )
 meson.add_install_script('meson_post_install.py')
 
 i18n.merge_file(
-  input:  'org.baedert.corebird.desktop.in',
-  output: 'org.baedert.corebird.desktop',
+  input:  'de.lucaswerkmeister.corebird.desktop.in',
+  output: 'de.lucaswerkmeister.corebird.desktop',
   po_dir: '../po/',
   type:   'desktop',
   install: true,
   install_dir: join_paths(get_option('datadir'), 'applications')
 )
 i18n.merge_file(
-  input:  'org.baedert.corebird.appdata.xml.in',
-  output: 'org.baedert.corebird.appdata.xml',
+  input:  'de.lucaswerkmeister.corebird.appdata.xml.in',
+  output: 'de.lucaswerkmeister.corebird.appdata.xml',
   po_dir: '../po/',
   type:   'xml',
   install: true,
@@ -29,8 +29,8 @@ conf = configuration_data()
 conf.set('bindir', join_paths(get_option('prefix'), 'bin'))
 
 configure_file(
-  input: 'org.baedert.corebird.service.in',
-  output: 'org.baedert.corebird.service',
+  input: 'de.lucaswerkmeister.corebird.service.in',
+  output: 'de.lucaswerkmeister.corebird.service',
   configuration: conf,
   install_dir: join_paths(get_option('datadir'), 'dbus-1/services')
 )

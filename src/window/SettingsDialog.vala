@@ -15,7 +15,7 @@
  *  along with corebird.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-[GtkTemplate (ui = "/org/baedert/corebird/ui/settings-dialog.ui")]
+[GtkTemplate (ui = "/de/lucaswerkmeister/corebird/ui/settings-dialog.ui")]
 class SettingsDialog : Gtk.Window {
   [GtkChild]
   private Gtk.Switch on_new_mentions_switch;

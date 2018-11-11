@@ -15,7 +15,7 @@
  *  along with corebird.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-[GtkTemplate (ui = "/org/baedert/corebird/ui/user-list-entry.ui")]
+[GtkTemplate (ui = "/de/lucaswerkmeister/corebird/ui/user-list-entry.ui")]
 class UserListEntry : Gtk.ListBoxRow, Cb.TwitterItem {
   [GtkChild]
   private Gtk.Label name_label;

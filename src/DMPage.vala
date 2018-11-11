@@ -15,7 +15,7 @@
  *  along with corebird.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-[GtkTemplate (ui = "/org/baedert/corebird/ui/dm-page.ui")]
+[GtkTemplate (ui = "/de/lucaswerkmeister/corebird/ui/dm-page.ui")]
 class DMPage : IPage, Cb.MessageReceiver, Gtk.Box {
   public const int KEY_SENDER_ID   = 0;
   public const int KEY_SCREEN_NAME = 1;

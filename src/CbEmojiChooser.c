@@ -501,7 +501,7 @@ cb_emoji_chooser_class_init (CbEmojiChooserClass *klass)
                                         NULL,
                                         G_TYPE_NONE, 1, G_TYPE_STRING|G_SIGNAL_TYPE_STATIC_SCOPE);
 
-  gtk_widget_class_set_template_from_resource (widget_class, "/org/baedert/corebird/ui/cb-emoji-chooser.ui");
+  gtk_widget_class_set_template_from_resource (widget_class, "/de/lucaswerkmeister/corebird/ui/cb-emoji-chooser.ui");
 
   gtk_widget_class_bind_template_child (widget_class, CbEmojiChooser, search_entry);
   gtk_widget_class_bind_template_child (widget_class, CbEmojiChooser, stack);

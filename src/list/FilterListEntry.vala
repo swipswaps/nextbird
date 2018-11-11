@@ -14,7 +14,7 @@
  *  You should have received a copy of the GNU General Public License
  *  along with corebird.  If not, see <http://www.gnu.org/licenses/>.
  */
-[GtkTemplate (ui = "/org/baedert/corebird/ui/filter-list-entry.ui")]
+[GtkTemplate (ui = "/de/lucaswerkmeister/corebird/ui/filter-list-entry.ui")]
 class FilterListEntry : Gtk.ListBoxRow {
   [GtkChild]
   private Gtk.Label content_label;

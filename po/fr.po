@@ -26,57 +26,57 @@ msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: data/org.baedert.corebird.appdata.xml.in:5
-#: data/org.baedert.corebird.desktop.in:3
+#: data/de.lucaswerkmeister.corebird.appdata.xml.in:5
+#: data/de.lucaswerkmeister.corebird.desktop.in:3
 msgid "Corebird"
 msgstr "Corebird"
 
-#: data/org.baedert.corebird.appdata.xml.in:6
-#: data/org.baedert.corebird.desktop.in:4
+#: data/de.lucaswerkmeister.corebird.appdata.xml.in:6
+#: data/de.lucaswerkmeister.corebird.desktop.in:4
 msgid "Twitter Client"
 msgstr "Client Twitter"
 
-#: data/org.baedert.corebird.appdata.xml.in:10
+#: data/de.lucaswerkmeister.corebird.appdata.xml.in:10
 msgid ""
 "Corebird is a native GTK+ twitter client that provides vital features such "
 "as Direct Messages (DMs), tweet notifications, conversation views."
 msgstr "Corebird est un client Twitter natif en GTK+ proposant les fonctions vitales telles que les messages directs (dm), les notifications, les vues en conversations."
 
-#: data/org.baedert.corebird.appdata.xml.in:13
+#: data/de.lucaswerkmeister.corebird.appdata.xml.in:13
 msgid ""
 "Additional features include local viewing of videos, multiple inline images,"
 " Lists, Filters, multiple accounts, etc."
 msgstr "Les fonctions additionnelles incluent le visionnage en local des vidéos, les insertions multiples d'images, les listes, les filtres, les comptes multiples, etc."
 
-#: data/org.baedert.corebird.appdata.xml.in:21
+#: data/de.lucaswerkmeister.corebird.appdata.xml.in:21
 msgid "Generic timeline view when using Corebird"
 msgstr "Vue générique de la timeline avec Corebird"
 
-#: data/org.baedert.corebird.appdata.xml.in:25
+#: data/de.lucaswerkmeister.corebird.appdata.xml.in:25
 msgid "Typical Twitter profile"
 msgstr "Profil Twitter typique"
 
-#: data/org.baedert.corebird.appdata.xml.in:29
+#: data/de.lucaswerkmeister.corebird.appdata.xml.in:29
 msgid "Account settings can be configured"
 msgstr "Les réglages de comptes peuvent être configurés"
 
-#: data/org.baedert.corebird.appdata.xml.in:41
+#: data/de.lucaswerkmeister.corebird.appdata.xml.in:41
 msgid "Timm Bäder"
 msgstr "Timm Bäder"
 
-#: data/org.baedert.corebird.desktop.in:5
+#: data/de.lucaswerkmeister.corebird.desktop.in:5
 msgid "Use Twitter from within a normal desktop application"
 msgstr "Utiliser Twitter depuis une application de bureau classique"
 
 #. TRANSLATORS: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: data/org.baedert.corebird.desktop.in:7
+#: data/de.lucaswerkmeister.corebird.desktop.in:7
 msgid "twitter;"
 msgstr "twitter;"
 
 #. TRANSLATORS: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: data/org.baedert.corebird.desktop.in:11
+#: data/de.lucaswerkmeister.corebird.desktop.in:11
 msgid "corebird"
 msgstr "corebird"
 

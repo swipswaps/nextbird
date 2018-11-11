@@ -15,7 +15,7 @@
  *  along with corebird.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-[GtkTemplate (ui = "/org/baedert/corebird/ui/user-lists-widget.ui")]
+[GtkTemplate (ui = "/de/lucaswerkmeister/corebird/ui/user-lists-widget.ui")]
 class UserListsWidget : Gtk.Box {
   [GtkChild]
   private Gtk.Label user_list_label;

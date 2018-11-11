@@ -15,7 +15,7 @@
  *  along with corebird.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-[GtkTemplate (ui = "/org/baedert/corebird/ui/start-conversation-entry.ui")]
+[GtkTemplate (ui = "/de/lucaswerkmeister/corebird/ui/start-conversation-entry.ui")]
 class StartConversationEntry : Gtk.ListBoxRow {
   private const int MAX_RESULTS = 7;
   [GtkChild]

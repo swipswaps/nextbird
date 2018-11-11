@@ -512,7 +512,7 @@ class UserCompletionRow : Gtk.ListBoxRow {
   static construct {
     try {
       verified_surface = Gdk.cairo_surface_create_from_pixbuf (
-          new Gdk.Pixbuf.from_resource ("/org/baedert/corebird/data/verified-small.png"),
+          new Gdk.Pixbuf.from_resource ("/de/lucaswerkmeister/corebird/data/verified-small.png"),
           1, null);
     } catch (GLib.Error e) {
       error (e.message);

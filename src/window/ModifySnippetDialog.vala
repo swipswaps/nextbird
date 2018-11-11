@@ -15,7 +15,7 @@
  *  along with corebird.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-[GtkTemplate (ui = "/org/baedert/corebird/ui/modify-snippet-dialog.ui")]
+[GtkTemplate (ui = "/de/lucaswerkmeister/corebird/ui/modify-snippet-dialog.ui")]
 class ModifySnippetDialog : Gtk.Dialog {
   [GtkChild]
   private Gtk.Entry key_entry;
