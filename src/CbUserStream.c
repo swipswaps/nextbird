@@ -158,16 +158,16 @@ cb_user_stream_init (CbUserStream *self)
 
   if (self->stresstest)
     {
-      self->proxy = oauth_proxy_new ("0rvHLdbzRULZd5dz6X1TUA",
-                                     "oGrvd6654nWLhzLcJywSW3pltUfkhP4BnraPPVNhHtY",
+      self->proxy = oauth_proxy_new ("66oowkKJcNxsfaBft7NOYBjub",
+                                     "hfcXJFmqVAGK98wDbeCowQj272Ib18vcslOhvxW17XRLHcLKFJ",
                                      "https://stream.twitter.com/",
                                      FALSE);
     }
   else
     {
       /* TODO: We should be getting these from the settings */
-      self->proxy = oauth_proxy_new ("0rvHLdbzRULZd5dz6X1TUA",
-                                     "oGrvd6654nWLhzLcJywSW3pltUfkhP4BnraPPVNhHtY",
+      self->proxy = oauth_proxy_new ("66oowkKJcNxsfaBft7NOYBjub",
+                                     "hfcXJFmqVAGK98wDbeCowQj272Ib18vcslOhvxW17XRLHcLKFJ",
                                      "https://userstream.twitter.com/",
                                      FALSE);
     }
