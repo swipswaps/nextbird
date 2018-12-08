@@ -71,6 +71,9 @@ network_cb (gpointer user_data)
   CbUserStream *self = user_data;
   gboolean available;
 
+  if (!self->proxy_data_set)
+    return; // not initialized
+
   if (self->state == STATE_RUNNING)
     {
       self->network_timeout_id = 0;
@@ -108,6 +111,9 @@ network_changed_cb (GNetworkMonitor *monitor,
 
   if (available == self->network_available)
     return;
+
+  if (!self->proxy_data_set)
+    return; // not initialized
 
   self->network_available = available;
 
