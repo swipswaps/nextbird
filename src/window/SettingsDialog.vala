@@ -1,21 +1,21 @@
-/*  This file is part of corebird, a Gtk+ linux Twitter client.
+/*  This file is part of nextbird, a Gtk+ linux Twitter client.
  *  Copyright (C) 2013 Timm Bäder
  *
- *  corebird is free software: you can redistribute it and/or modify
+ *  nextbird is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
  *  (at your option) any later version.
  *
- *  corebird is distributed in the hope that it will be useful,
+ *  nextbird is distributed in the hope that it will be useful,
  *  but WITHOUT ANY WARRANTY; without even the implied warranty of
  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *  GNU General Public License for more details.
  *
  *  You should have received a copy of the GNU General Public License
- *  along with corebird.  If not, see <http://www.gnu.org/licenses/>.
+ *  along with nextbird.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-[GtkTemplate (ui = "/de/lucaswerkmeister/corebird/ui/settings-dialog.ui")]
+[GtkTemplate (ui = "/de/lucaswerkmeister/nextbird/ui/settings-dialog.ui")]
 class SettingsDialog : Gtk.Window {
   [GtkChild]
   private Gtk.Switch on_new_mentions_switch;
@@ -48,7 +48,7 @@ class SettingsDialog : Gtk.Window {
 
   private bool block_flag_emission = false;
 
-  public SettingsDialog (Corebird application) {
+  public SettingsDialog (Nextbird application) {
     this.application = application;
 
     // Notifications Page
@@ -79,13 +79,13 @@ class SettingsDialog : Gtk.Window {
     sample_tweet.source_tweet = Cb.MiniTweet();
     sample_tweet.source_tweet.author = Cb.UserIdentity() {
       id = 12,
-      screen_name = "corebirdclient",
-      user_name = "Corebird"
+      screen_name = "nextbirdclient",
+      user_name = "Nextbird"
     };
-    string sample_text = _("Hey, check out this new #Corebird version! \\ (•◡•) / #cool #newisalwaysbetter");
+    string sample_text = _("Hey, check out this new #Nextbird version! \\ (•◡•) / #cool #newisalwaysbetter");
     Cairo.Surface? avatar_surface = null;
     try {
-      var a = Gtk.IconTheme.get_default ().load_icon ("corebird",
+      var a = Gtk.IconTheme.get_default ().load_icon ("nextbird",
                                                       48 * this.get_scale_factor (),
                                                       Gtk.IconLookupFlags.FORCE_SIZE);
       avatar_surface = Gdk.cairo_surface_create_from_pixbuf (a, this.get_scale_factor (), this.get_window ());
@@ -148,7 +148,7 @@ class SettingsDialog : Gtk.Window {
 
 
     // Fill snippet list box
-    Corebird.snippet_manager.query_snippets ((key, value) => {
+    Nextbird.snippet_manager.query_snippets ((key, value) => {
       var e = new SnippetListEntry ((string)key, (string)value);
       e.show_all ();
       snippet_list_box.add (e);

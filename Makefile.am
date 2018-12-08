@@ -6,10 +6,10 @@ EXTRA_DIST = \
 	vapi/config.vapi \
 	vapi/rest-0.7.vapi \
 	vapi/libtl.vapi \
-	vapi/corebird-internal.vapi \
-	corebird.gresource.xml
+	vapi/nextbird-internal.vapi \
+	nextbird.gresource.xml
 
 
-update-translations: po/corebird.pot
+update-translations: po/nextbird.pot
 	@tx pull --all --force --skip --minimum-perc=1
 	@tx push --source

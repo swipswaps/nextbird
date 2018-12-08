@@ -1,21 +1,21 @@
-/*  This file is part of corebird, a Gtk+ linux Twitter client.
+/*  This file is part of nextbird, a Gtk+ linux Twitter client.
  *  Copyright (C) 2013 Timm Bäder
  *
- *  corebird is free software: you can redistribute it and/or modify
+ *  nextbird is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
  *  (at your option) any later version.
  *
- *  corebird is distributed in the hope that it will be useful,
+ *  nextbird is distributed in the hope that it will be useful,
  *  but WITHOUT ANY WARRANTY; without even the implied warranty of
  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *  GNU General Public License for more details.
  *
  *  You should have received a copy of the GNU General Public License
- *  along with corebird.  If not, see <http://www.gnu.org/licenses/>.
+ *  along with nextbird.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-[GtkTemplate (ui = "/de/lucaswerkmeister/corebird/ui/account-create-widget.ui")]
+[GtkTemplate (ui = "/de/lucaswerkmeister/nextbird/ui/account-create-widget.ui")]
 class AccountCreateWidget : Gtk.Box {
   [GtkChild]
   private Gtk.Entry pin_entry;
@@ -30,13 +30,13 @@ class AccountCreateWidget : Gtk.Box {
   [GtkChild]
   private Gtk.Stack content_stack;
   private unowned Account acc;
-  private unowned Corebird corebird;
+  private unowned Nextbird nextbird;
   private unowned MainWindow main_window;
   public signal void result_received (bool result, Account acc);
 
-  public AccountCreateWidget (Account acc, Corebird corebird, MainWindow main_window) {
+  public AccountCreateWidget (Account acc, Nextbird nextbird, MainWindow main_window) {
     this.acc = acc;
-    this.corebird = corebird;
+    this.nextbird = nextbird;
     this.main_window = main_window;
     info_label.label = "%s <a href=\"https://twitter.com/signup\">%s</a>"
                        .printf (_("Don’t have a Twitter account yet?"), _("Create one"));
@@ -137,7 +137,7 @@ class AccountCreateWidget : Gtk.Box {
           .val ("token_secret", acc.proxy.token_secret)
           .run ();
     acc.init_proxy (true, true);
-    corebird.account_added (acc);
+    nextbird.account_added (acc);
     result_received (true, acc);
   }
 

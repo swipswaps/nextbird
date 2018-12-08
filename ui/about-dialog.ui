@@ -2,15 +2,15 @@
 <interface>
   <template class="AboutDialog" parent="GtkAboutDialog">
     <property name="can-focus">1</property>
-    <property name="title" translatable="yes">About Corebird</property>
+    <property name="title" translatable="yes">About Nextbird</property>
     <property name="type-hint">dialog</property>
-    <property name="program-name">Corebird</property>
+    <property name="program-name">Nextbird</property>
     <property name="version">1.7.4.2</property>
-    <property name="website">https://github.com/lucaswerkmeister/corebird</property>
+    <property name="website">https://github.com/lucaswerkmeister/nextbird</property>
     <property name="authors">Timm Bäder&lt;mail@baedert.org&gt; (original author)
 Lucas Werkmeister&lt;mail@lucaswerkmeister.de&gt; (maintainer)
 </property>
-    <property name="logo-icon-name">corebird</property>
+    <property name="logo-icon-name">nextbird</property>
     <property name="license-type">gpl-3-0</property>
     <signal name="response" handler="response_cb" swapped="no"/>
   </template>

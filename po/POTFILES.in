@@ -1,7 +1,7 @@
 # List of source files containing translatable strings.
 # Please keep this file sorted alphabetically.
-data/de.lucaswerkmeister.corebird.appdata.xml.in
-data/de.lucaswerkmeister.corebird.desktop.in
+data/de.lucaswerkmeister.nextbird.appdata.xml.in
+data/de.lucaswerkmeister.nextbird.desktop.in
 src/CbUtils.c
 src/DMPage.vala
 src/DMThreadsPage.vala

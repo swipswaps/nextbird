@@ -1,4 +1,4 @@
-AC_INIT([corebird],[1.7.4.2],[mail@lucaswerkmeister.de])
+AC_INIT([nextbird],[1.7.4.2],[mail@lucaswerkmeister.de])
 
 AC_PREREQ([2.65])
 
@@ -124,7 +124,7 @@ if test "$enable_spellcheck" != "no"; then
   CB_CFLAGS="$CB_CFLAGS -D SPELLCHECK"
 fi
 
-# XXX Disabled for now since it breaks apparently (https://github.com/baedert/corebird/issues/820)
+# XXX Disabled for now since it breaks apparently (https://github.com/baedert/nextbird/issues/820)
 #     and this check is not present in master anyway.
 #if test "$enable_gst_check" != "no"; then
   # Check for gtksink
@@ -171,7 +171,7 @@ AC_OUTPUT
 VALAC_VERSION=$($VALAC --version)
 
 echo "
-                Corebird  $VERSION
+                Nextbird  $VERSION
                   Prefix: ${prefix}
            Vala Compiler: ${VALAC} ${CB_VALA_FLAGS}
            valac version: ${VALAC_VERSION}
