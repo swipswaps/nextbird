@@ -7,8 +7,8 @@
     <property name="program-name">Nextbird</property>
     <property name="version">1.7.4.2</property>
     <property name="website">https://github.com/lucaswerkmeister/nextbird</property>
-    <property name="authors">Timm Bäder&lt;mail@baedert.org&gt; (original author)
-Lucas Werkmeister&lt;mail@lucaswerkmeister.de&gt; (maintainer)
+    <property name="authors">Timm Bäder&lt;mail@baedert.org&gt; (Corebird)
+Lucas Werkmeister&lt;mail@lucaswerkmeister.de&gt; (Nextbird)
 </property>
     <property name="logo-icon-name">nextbird</property>
     <property name="license-type">gpl-3-0</property>
