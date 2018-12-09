@@ -27,10 +27,7 @@ namespace Dirs {
 
   public string config (string path) {
     if (config_dir == null) {
-      config_dir = GLib.Environment.get_home_dir () + "/.nextbird/";
-      if (!GLib.FileUtils.test (config_dir, GLib.FileTest.EXISTS)) {
-        config_dir = GLib.Environment.get_user_config_dir () + "/nextbird/";
-      }
+      config_dir = GLib.Environment.get_user_config_dir () + "/nextbird/";
     }
     return config_dir + path;
   }
