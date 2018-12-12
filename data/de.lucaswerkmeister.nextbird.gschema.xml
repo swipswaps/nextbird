@@ -1,5 +1,5 @@
 <schemalist>
-  <enum id="de.lucaswerkmeister.corebird.tweet-stack">
+  <enum id="de.lucaswerkmeister.nextbird.tweet-stack">
     <value nick="Never"    value="0"  />
     <value nick="Every"    value="1"  />
     <value nick="Stack 5"  value="5"  />
@@ -8,16 +8,16 @@
     <value nick="Stack 50" value="50" />
   </enum>
 
-  <enum id="de.lucaswerkmeister.corebird.media-visibility">
+  <enum id="de.lucaswerkmeister.nextbird.media-visibility">
     <value nick="Show" value="1" />
     <value nick="Hide" value="2" />
     <value nick="Hide in Timeline" value="3" />
 
   </enum>
 
-  <schema id="de.lucaswerkmeister.corebird"
-      path="/de/lucaswerkmeister/corebird/"
-      gettext-domain="corebird">
+  <schema id="de.lucaswerkmeister.nextbird"
+      path="/de/lucaswerkmeister/nextbird/"
+      gettext-domain="nextbird">
 
     <key name="use-dark-theme" type="b">
       <default>false</default>
@@ -25,7 +25,7 @@
       <description></description>
     </key>
 
-    <key name="new-tweets-notify" enum="de.lucaswerkmeister.corebird.tweet-stack">
+    <key name="new-tweets-notify" enum="de.lucaswerkmeister.nextbird.tweet-stack">
       <default>"Never"</default>
       <summary>If/when the user should be notified about new tweets</summary>
       <description>
@@ -43,7 +43,7 @@
     </key>
     <key name="startup-accounts" type="as">
       <default>[""]</default>
-      <summary>List of accounts which will be opened when Corebird is started.</summary>
+      <summary>List of accounts which will be opened when Nextbird is started.</summary>
       <description></description>
     </key>
     <key name="auto-scroll-on-new-tweets" type="b">
@@ -88,11 +88,11 @@
       <summary>Size and position of the settings dialog</summary>
     </key>
     <key type="s" name="consumer-key">
-      <default>"0rvHLdbzRULZd5dz6X1TUA"</default>
+      <default>"66oowkKJcNxsfaBft7NOYBjub"</default>
       <summary>The application's oauth consumer key.</summary>
     </key>
     <key type="s" name="consumer-secret">
-      <default>"oGrvd6654nWLhzLcJywSW3pltUfkhP4BnraPPVNhHtY"</default>
+      <default>"hfcXJFmqVAGK98wDbeCowQj272Ib18vcslOhvxW17XRLHcLKFJ"</default>
       <summary>The application's oauth consumer secret</summary>
     </key>
     <key type="b" name="round-avatars">
@@ -110,7 +110,7 @@
       <default>true</default>
       <summary>Whether to hide images marked as inappropriate by default or not</summary>
     </key>
-    <key name="media-visibility" enum="de.lucaswerkmeister.corebird.media-visibility">
+    <key name="media-visibility" enum="de.lucaswerkmeister.nextbird.media-visibility">
       <default>"Show"</default>
       <summary>When to show media attached to tweets</summary>
     </key>

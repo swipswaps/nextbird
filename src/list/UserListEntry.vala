@@ -1,21 +1,21 @@
-/*  This file is part of corebird, a Gtk+ linux Twitter client.
+/*  This file is part of nextbird, a Gtk+ linux Twitter client.
  *  Copyright (C) 2013 Timm Bäder
  *
- *  corebird is free software: you can redistribute it and/or modify
+ *  nextbird is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
  *  (at your option) any later version.
  *
- *  corebird is distributed in the hope that it will be useful,
+ *  nextbird is distributed in the hope that it will be useful,
  *  but WITHOUT ANY WARRANTY; without even the implied warranty of
  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *  GNU General Public License for more details.
  *
  *  You should have received a copy of the GNU General Public License
- *  along with corebird.  If not, see <http://www.gnu.org/licenses/>.
+ *  along with nextbird.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-[GtkTemplate (ui = "/de/lucaswerkmeister/corebird/ui/user-list-entry.ui")]
+[GtkTemplate (ui = "/de/lucaswerkmeister/nextbird/ui/user-list-entry.ui")]
 class UserListEntry : Gtk.ListBoxRow, Cb.TwitterItem {
   [GtkChild]
   private Gtk.Label name_label;
@@ -92,7 +92,7 @@ class UserListEntry : Gtk.ListBoxRow, Cb.TwitterItem {
     acc.notify["avatar"].connect (() => {
       this.avatar_surface = this.account.avatar;
     });
-    var cb = (Corebird) GLib.Application.get_default ();
+    var cb = (Nextbird) GLib.Application.get_default ();
     cb.window_added.connect ((window) => {
       if (window is MainWindow) {
         update_window_button_sensitivity (window, false);
@@ -156,7 +156,7 @@ class UserListEntry : Gtk.ListBoxRow, Cb.TwitterItem {
 
   [GtkCallback]
   private void new_window_button_clicked_cb () {
-    var cb = (Corebird) GLib.Application.get_default ();
+    var cb = (Nextbird) GLib.Application.get_default ();
     var window = new MainWindow (cb, this.account);
     cb.add_window (window);
     window.show_all ();

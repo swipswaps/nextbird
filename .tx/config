@@ -1,10 +1,10 @@
 [main]
 host = https://transifex.com
 
-[corebird.corebirdpot]
+[nextbird.nextbirdpot]
 file_filter = po/<lang>.po
 host = https://transifex.com
-source_file = po/corebird.pot
+source_file = po/nextbird.pot
 source_lang = en
 type = PO
 lang_map = id_ID: id, ro_RO: ro, pt_PT: pt, ko_KR: ko, hi_IN: hi, ja_JP: ja, tr_TR: tr

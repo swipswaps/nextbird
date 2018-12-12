@@ -1,25 +1,25 @@
-/*  This file is part of corebird, a Gtk+ linux Twitter client.
+/*  This file is part of nextbird, a Gtk+ linux Twitter client.
  *  Copyright (C) 2013 Timm Bäder
  *
- *  corebird is free software: you can redistribute it and/or modify
+ *  nextbird is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
  *  (at your option) any later version.
  *
- *  corebird is distributed in the hope that it will be useful,
+ *  nextbird is distributed in the hope that it will be useful,
  *  but WITHOUT ANY WARRANTY; without even the implied warranty of
  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *  GNU General Public License for more details.
  *
  *  You should have received a copy of the GNU General Public License
- *  along with corebird.  If not, see <http://www.gnu.org/licenses/>.
+ *  along with nextbird.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 namespace Sql {
-  public const int    COREBIRD_SQL_VERSION = 2;
-  public const string COREBIRD_INIT_FILE = "/de/lucaswerkmeister/corebird/sql/init/Create.%d.sql";
+  public const int    NEXTBIRD_SQL_VERSION = 2;
+  public const string NEXTBIRD_INIT_FILE = "/de/lucaswerkmeister/nextbird/sql/init/Create.%d.sql";
   public const int    ACCOUNTS_SQL_VERSION = 3;
-  public const string ACCOUNTS_INIT_FILE = "/de/lucaswerkmeister/corebird/sql/accounts/Create.%d.sql";
+  public const string ACCOUNTS_INIT_FILE = "/de/lucaswerkmeister/nextbird/sql/accounts/Create.%d.sql";
 
   private const int STOP     = -1;
   private const int CONTINUE =  0;

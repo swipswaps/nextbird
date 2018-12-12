@@ -1,21 +1,21 @@
-/*  This file is part of corebird, a Gtk+ linux Twitter client.
+/*  This file is part of nextbird, a Gtk+ linux Twitter client.
  *  Copyright (C) 2013 Timm Bäder
  *
- *  corebird is free software: you can redistribute it and/or modify
+ *  nextbird is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
  *  (at your option) any later version.
  *
- *  corebird is distributed in the hope that it will be useful,
+ *  nextbird is distributed in the hope that it will be useful,
  *  but WITHOUT ANY WARRANTY; without even the implied warranty of
  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *  GNU General Public License for more details.
  *
  *  You should have received a copy of the GNU General Public License
- *  along with corebird.  If not, see <http://www.gnu.org/licenses/>.
+ *  along with nextbird.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-[GtkTemplate (ui = "/de/lucaswerkmeister/corebird/ui/modify-snippet-dialog.ui")]
+[GtkTemplate (ui = "/de/lucaswerkmeister/nextbird/ui/modify-snippet-dialog.ui")]
 class ModifySnippetDialog : Gtk.Dialog {
   [GtkChild]
   private Gtk.Entry key_entry;
@@ -81,7 +81,7 @@ class ModifySnippetDialog : Gtk.Dialog {
       return;
     }
 
-    if (Corebird.snippet_manager.get_snippet (key) != null &&
+    if (Nextbird.snippet_manager.get_snippet (key) != null &&
         this.old_key != key) {
       error_label.label = _("Snippet already exists");
       save_button.sensitive = false;
@@ -96,9 +96,9 @@ class ModifySnippetDialog : Gtk.Dialog {
     string new_key   = this.key_entry.text;
 
     if (this.old_key != null) {
-      Corebird.snippet_manager.set_snippet (old_key, new_key, new_value);
+      Nextbird.snippet_manager.set_snippet (old_key, new_key, new_value);
     } else {
-      Corebird.snippet_manager.insert_snippet (new_key, new_value);
+      Nextbird.snippet_manager.insert_snippet (new_key, new_value);
     }
 
     this.snippet_updated (old_key, new_key, new_value);
@@ -107,7 +107,7 @@ class ModifySnippetDialog : Gtk.Dialog {
   [GtkCallback]
   private void delete_button_clicked_cb () {
     assert (this.old_key != null);
-    Corebird.snippet_manager.remove_snippet (this.old_key);
+    Nextbird.snippet_manager.remove_snippet (this.old_key);
 
     this.snippet_updated (this.old_key, null, null);
     this.destroy ();

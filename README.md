@@ -1,4 +1,4 @@
-# Corebird 1.7.4.2
+# Nextbird 2.0.0-beta
 
 **This is a “life support” *fork* of Corebird.**
 
@@ -10,11 +10,11 @@ see [this post](https://www.patreon.com/posts/corebirds-future-18921328) for mor
 
 Some Corebird users, on the other hand, wish to keep using Corebird:
 even in its broken form, they prefer it to Twitter’s native clients.
-This fork therefore aims to collect patches to improve the Corebird experience as much as possible.
-Beware that the maintainers of this fork are not very familiar with the Corebird codebase,
+This fork, **Nextbird**, therefore aims to collect patches to improve the experience as much as possible.
+Beware that the maintainers of this fork are not very familiar with the codebase,
 and may introduce new bugs while trying to fix other problems.
 Please do not pester the original author with those problems
-(or, at this point, with any other problems in Corebird) –
+(or, at this point, with any other problems in Corebird or Nextbird) –
 it’s his good right to be done with the project.
 
 
@@ -46,7 +46,8 @@ it’s his good right to be done with the project.
 
 ## Translations
 
-  Since February 2014, there's a [Corebird project on Transifex](https://www.transifex.com/projects/p/corebird)
+  Since February 2014, there's a [Corebird project on Transifex](https://www.transifex.com/projects/p/corebird).
+  Presumably we’ll create a separate Nextbird project at some point.
 
 ## Contributing
 
@@ -81,4 +82,4 @@ make
 make install
 ```
 
-Corebird installs its application icon into `/usr/share/icons/hicolor/`, so an appropriate call to `gtk-update-icon-cache` might be needed.
+Nextbird installs its application icon into `/usr/share/icons/hicolor/`, so an appropriate call to `gtk-update-icon-cache` might be needed.

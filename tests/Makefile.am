@@ -15,9 +15,9 @@ AM_VALAFLAGS = \
 	--enable-experimental \
 	--vapidir $(top_builddir)/src \
 	--vapidir $(top_srcdir)/vapi \
-	--pkg corebird-internal \
+	--pkg nextbird-internal \
 	--pkg rest-0.7 \
-	--gresources $(top_srcdir)/corebird.gresource.xml \
+	--gresources $(top_srcdir)/nextbird.gresource.xml \
 	-C
 
 TESTS_ENVIRONMENT = GSETTINGS_SCHEMA_DIR=$(abs_top_builddir)/data
@@ -56,65 +56,65 @@ tests_VALASOURCES = \
 
 $(tests_VALASOURCES:.vala=.c): tests_vala.stamp
 
-tests_vala.stamp: $(tests_VALASOURCES) $(top_builddir)/src/libcorebird.la $(top_builddir)/src/corebird.vapi Makefile
+tests_vala.stamp: $(tests_VALASOURCES) $(top_builddir)/src/libnextbird.la $(top_builddir)/src/nextbird.vapi Makefile
 	for s in $(filter %.vala,$^); do \
 		$(VALAC) \
 			$(AM_VALAFLAGS) $(CB_VALA_FLAGS) \
-			--pkg corebird \
+			--pkg nextbird \
 			--enable-deprecated \
 			$$s; \
 	done; \
 	touch $@
 
-resource_deps = $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies --sourcedir=$(top_srcdir) $(top_srcdir)/corebird.gresource.xml)
-corebird-resources.c: $(top_srcdir)/corebird.gresource.xml $(resource_deps) Makefile
-	XMLLINT=$(XMLLINT) $(GLIB_COMPILE_RESOURCES) --target $@ --generate --sourcedir=$(top_srcdir) --c-name corebird $<
+resource_deps = $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies --sourcedir=$(top_srcdir) $(top_srcdir)/nextbird.gresource.xml)
+nextbird-resources.c: $(top_srcdir)/nextbird.gresource.xml $(resource_deps) Makefile
+	XMLLINT=$(XMLLINT) $(GLIB_COMPILE_RESOURCES) --target $@ --generate --sourcedir=$(top_srcdir) --c-name nextbird $<
 
 
 
 nodist_tweetmodel_SOURCES = tweetmodel.c
-tweetmodel_LDADD = $(top_builddir)/src/libcorebird.la
+tweetmodel_LDADD = $(top_builddir)/src/libnextbird.la
 
 nodist_utils_SOURCES = utils.c
-utils_LDADD = $(top_builddir)/src/libcorebird.la
+utils_LDADD = $(top_builddir)/src/libnextbird.la
 
 nodist_bundlehistory_SOURCES = bundlehistory.c
-bundlehistory_LDADD = $(top_builddir)/src/libcorebird.la
+bundlehistory_LDADD = $(top_builddir)/src/libnextbird.la
 
-nodist_usercounter_SOURCES = usercounter.c corebird-resources.c
-usercounter_LDADD = $(top_builddir)/src/libcorebird.la
+nodist_usercounter_SOURCES = usercounter.c nextbird-resources.c
+usercounter_LDADD = $(top_builddir)/src/libnextbird.la
 
 nodist_inlinemediadownloader_SOURCES = inlinemediadownloader.c
-inlinemediadownloader_LDADD = $(top_builddir)/src/libcorebird.la
+inlinemediadownloader_LDADD = $(top_builddir)/src/libnextbird.la
 
-nodist_tweetparsing_SOURCES = tweetparsing.c corebird-resources.c
-tweetparsing_LDADD = $(top_builddir)/src/libcorebird.la
+nodist_tweetparsing_SOURCES = tweetparsing.c nextbird-resources.c
+tweetparsing_LDADD = $(top_builddir)/src/libnextbird.la
 
-nodist_filters_SOURCES = filters.c corebird-resources.c
-filters_LDADD = $(top_builddir)/src/libcorebird.la
+nodist_filters_SOURCES = filters.c nextbird-resources.c
+filters_LDADD = $(top_builddir)/src/libnextbird.la
 
-nodist_friends_SOURCES = friends.c corebird-resources.c
-friends_LDADD = $(top_builddir)/src/libcorebird.la
+nodist_friends_SOURCES = friends.c nextbird-resources.c
+friends_LDADD = $(top_builddir)/src/libnextbird.la
 
 nodist_texttransform_SOURCES = texttransform.c
-texttransform_LDADD = $(top_builddir)/src/libcorebird.la
+texttransform_LDADD = $(top_builddir)/src/libnextbird.la
 
-nodist_avatardownload_SOURCES = avatardownload.c corebird-resources.c
-avatardownload_LDADD = $(top_builddir)/src/libcorebird.la
+nodist_avatardownload_SOURCES = avatardownload.c nextbird-resources.c
+avatardownload_LDADD = $(top_builddir)/src/libnextbird.la
 
 nodist_avatarcache_SOURCES = avatarcache.c
-avatarcache_LDADD = $(top_builddir)/src/libcorebird.la
+avatarcache_LDADD = $(top_builddir)/src/libnextbird.la
 
 nodist_usercompletionmodel_SOURCES = usercompletionmodel.c
-usercompletionmodel_LDADD = $(top_builddir)/src/libcorebird.la
+usercompletionmodel_LDADD = $(top_builddir)/src/libnextbird.la
 
-nodist_dmmanager_SOURCES = dmmanager.c corebird-resources.c
-dmmanager_LDADD = $(top_builddir)/src/libcorebird.la
+nodist_dmmanager_SOURCES = dmmanager.c nextbird-resources.c
+dmmanager_LDADD = $(top_builddir)/src/libnextbird.la
 
 
 CLEANFILES = \
 	tests_vala.stamp \
-	corebird-resources.c \
+	nextbird-resources.c \
 	$(tests_VALASOURCES:.vala=.c)
 
 EXTRA_DIST = \

@@ -1,18 +1,18 @@
-/*  This file is part of corebird, a Gtk+ linux Twitter client.
+/*  This file is part of nextbird, a Gtk+ linux Twitter client.
  *  Copyright (C) 2017 Timm Bäder
  *
- *  corebird is free software: you can redistribute it and/or modify
+ *  nextbird is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
  *  (at your option) any later version.
  *
- *  corebird is distributed in the hope that it will be useful,
+ *  nextbird is distributed in the hope that it will be useful,
  *  but WITHOUT ANY WARRANTY; without even the implied warranty of
  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *  GNU General Public License for more details.
  *
  *  You should have received a copy of the GNU General Public License
- *  along with corebird.  If not, see <http://www.gnu.org/licenses/>.
+ *  along with nextbird.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 #include "CbUserStream.h"
@@ -71,6 +71,9 @@ network_cb (gpointer user_data)
   CbUserStream *self = user_data;
   gboolean available;
 
+  if (!self->proxy_data_set)
+    return; // not initialized
+
   if (self->state == STATE_RUNNING)
     {
       self->network_timeout_id = 0;
@@ -108,6 +111,9 @@ network_changed_cb (GNetworkMonitor *monitor,
 
   if (available == self->network_available)
     return;
+
+  if (!self->proxy_data_set)
+    return; // not initialized
 
   self->network_available = available;
 
@@ -158,16 +164,16 @@ cb_user_stream_init (CbUserStream *self)
 
   if (self->stresstest)
     {
-      self->proxy = oauth_proxy_new ("0rvHLdbzRULZd5dz6X1TUA",
-                                     "oGrvd6654nWLhzLcJywSW3pltUfkhP4BnraPPVNhHtY",
+      self->proxy = oauth_proxy_new ("66oowkKJcNxsfaBft7NOYBjub",
+                                     "hfcXJFmqVAGK98wDbeCowQj272Ib18vcslOhvxW17XRLHcLKFJ",
                                      "https://stream.twitter.com/",
                                      FALSE);
     }
   else
     {
       /* TODO: We should be getting these from the settings */
-      self->proxy = oauth_proxy_new ("0rvHLdbzRULZd5dz6X1TUA",
-                                     "oGrvd6654nWLhzLcJywSW3pltUfkhP4BnraPPVNhHtY",
+      self->proxy = oauth_proxy_new ("66oowkKJcNxsfaBft7NOYBjub",
+                                     "hfcXJFmqVAGK98wDbeCowQj272Ib18vcslOhvxW17XRLHcLKFJ",
                                      "https://userstream.twitter.com/",
                                      FALSE);
     }

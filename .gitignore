@@ -1,7 +1,7 @@
-corebird
-Corebird.db
+nextbird
+Nextbird.db
 src/*.c
-Corebird
+Nextbird
 src/widgets/*.c
 src/containers/*.c
 src/util/*.c
@@ -59,7 +59,7 @@ test-driver
 stamp*
 .libs
 data/gschemas.compiled
-src/corebird.h
-src/corebird.vapi
+src/nextbird.h
+src/nextbird.vapi
 build/
-libcorebird.vapi
+libnextbird.vapi

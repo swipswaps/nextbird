@@ -3,7 +3,7 @@ AM_CPPFLAGS = \
 	-include $(CONFIG_HEADER) \
 	-DDATADIR=\"$(datadir)\" \
 	-DPKGDATADIR=\"$(pkgdatadir)\" \
-	-DG_LOG_DOMAIN=\"corebird\" \
+	-DG_LOG_DOMAIN=\"nextbird\" \
 	-I$(top_srcdir)/src/rest/
 
 
@@ -15,24 +15,24 @@ AM_VALAFLAGS = \
 	--vapidir $(top_srcdir)/vapi \
 	--basedir $(srcdir) \
 	--directory $(builddir) \
-	--gresources $(top_srcdir)/corebird.gresource.xml \
-	-D G_LOG_DOMAIN=\"corebird\" \
+	--gresources $(top_srcdir)/nextbird.gresource.xml \
+	-D G_LOG_DOMAIN=\"nextbird\" \
 	$(top_srcdir)/vapi/config.vapi \
-	$(top_srcdir)/vapi/corebird-internal.vapi \
+	$(top_srcdir)/vapi/nextbird-internal.vapi \
 	$(top_srcdir)/vapi/rest-0.7.vapi \
 	$(top_srcdir)/vapi/libtl.vapi \
 	-C \
 	$(NULL)
 
 BUILT_SOURCES = \
-	corebird.h \
-	corebird-resources.c
+	nextbird.h \
+	nextbird-resources.c
 
-bin_PROGRAMS = corebird
-noinst_LTLIBRARIES = libcorebird.la
+bin_PROGRAMS = nextbird
+noinst_LTLIBRARIES = libnextbird.la
 
-libcorebird_la_VALASOURCES = \
-	Corebird.vala \
+libnextbird_la_VALASOURCES = \
+	Nextbird.vala \
 	MainWindow.vala \
 	MainWidget.vala \
 	Account.vala \
@@ -112,15 +112,15 @@ libcorebird_la_VALASOURCES = \
 	async/Collect.vala \
 	model/DMThreadsModel.vala
 
-nodist_libcorebird_la_SOURCES = \
-	libcorebird_la_vala.stamp \
-	$(libcorebird_la_VALASOURCES:.vala=.c)
+nodist_libnextbird_la_SOURCES = \
+	libnextbird_la_vala.stamp \
+	$(libnextbird_la_VALASOURCES:.vala=.c)
 
-corebird.h corebird.vapi: libcorebird_la_vala.stamp
-$(libcorebird_la_VALASOURCES:.vala=.c): libcorebird_la_vala.stamp
+nextbird.h nextbird.vapi: libnextbird_la_vala.stamp
+$(libnextbird_la_VALASOURCES:.vala=.c): libnextbird_la_vala.stamp
 
 
-libcorebird_la_SOURCES = \
+libnextbird_la_SOURCES = \
 	CbMedia.c \
 	CbMedia.h \
 	CbMediaDownloader.c \
@@ -193,57 +193,57 @@ libcorebird_la_SOURCES = \
 
 
 
-libcorebird_la_vala.stamp: $(libcorebird_la_VALASOURCES) Makefile
+libnextbird_la_vala.stamp: $(libnextbird_la_VALASOURCES) Makefile
 	@$(VALAC) \
 		$(AM_VALAFLAGS) $(CB_VALA_FLAGS) \
-		-H corebird.h \
-		--library corebird \
-		--vapi corebird.vapi \
+		-H nextbird.h \
+		--library nextbird \
+		--vapi nextbird.vapi \
 		$(filter %.vala %.c,$^)
 	touch $@
 
-libcorebird_la_LIBADD = $(CB_LIBS)
+libnextbird_la_LIBADD = $(CB_LIBS)
 
-corebird_VALASOURCES = \
+nextbird_VALASOURCES = \
 	main.vala
 
 
-nodist_corebird_SOURCES = \
-	corebird_vala.stamp \
-	corebird-resources.c \
-	$(corebird_VALASOURCES:.vala=.c)
+nodist_nextbird_SOURCES = \
+	nextbird_vala.stamp \
+	nextbird-resources.c \
+	$(nextbird_VALASOURCES:.vala=.c)
 
-corebird_LDADD = \
+nextbird_LDADD = \
 	$(CB_LIBS) \
-	$(builddir)/libcorebird.la
+	$(builddir)/libnextbird.la
 
-corebird_VALAFLAGS = \
+nextbird_VALAFLAGS = \
 	$(CB_VALA_FLAGS) \
-	corebird.vapi
+	nextbird.vapi
 
-$(corebird_VALASOURCES:.vala=.c): corebird_vala.stamp
+$(nextbird_VALASOURCES:.vala=.c): nextbird_vala.stamp
 
-corebird_vala.stamp: $(builddir)/libcorebird.la $(builddir)/corebird.vapi $(corebird_VALASOURCES) Makefile
+nextbird_vala.stamp: $(builddir)/libnextbird.la $(builddir)/nextbird.vapi $(nextbird_VALASOURCES) Makefile
 	@$(VALAC) \
 		$(AM_VALAFLAGS) $(CB_VALA_FLAGS) \
-		--pkg corebird \
+		--pkg nextbird \
 		$(filter %.vala %.c,$^)
 	touch $@
 
-resource_deps = $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies --sourcedir=$(top_srcdir) $(top_srcdir)/corebird.gresource.xml)
-corebird-resources.c: $(top_srcdir)/corebird.gresource.xml $(resource_deps) Makefile
-	XMLLINT=$(XMLLINT) $(GLIB_COMPILE_RESOURCES) --target $@ --generate --sourcedir=$(top_srcdir) --c-name corebird $<
+resource_deps = $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies --sourcedir=$(top_srcdir) $(top_srcdir)/nextbird.gresource.xml)
+nextbird-resources.c: $(top_srcdir)/nextbird.gresource.xml $(resource_deps) Makefile
+	XMLLINT=$(XMLLINT) $(GLIB_COMPILE_RESOURCES) --target $@ --generate --sourcedir=$(top_srcdir) --c-name nextbird $<
 
 CLEANFILES = \
-	libcorebird_la_vala.stamp \
-	corebird_vala.stamp \
-	$(libcorebird_la_VALASOURCES:.vala=.c) \
-	$(nodist_corebird_SOURCES) \
-	corebird.vapi \
-	corebird.h
+	libnextbird_la_vala.stamp \
+	nextbird_vala.stamp \
+	$(libnextbird_la_VALASOURCES:.vala=.c) \
+	$(nodist_nextbird_SOURCES) \
+	nextbird.vapi \
+	nextbird.h
 
 EXTRA_DIST = \
-	$(libcorebird_la_VALASOURCES) \
-	$(corebird_VALASOURCES) \
-	$(corebird_SOURCES) \
+	$(libnextbird_la_VALASOURCES) \
+	$(nextbird_VALASOURCES) \
+	$(nextbird_SOURCES) \
 	$(resource_deps)

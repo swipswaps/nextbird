@@ -1,23 +1,23 @@
-/*  This file is part of corebird, a Gtk+ linux Twitter client.
+/*  This file is part of nextbird, a Gtk+ linux Twitter client.
  *  Copyright (C) 2013 Timm Bäder
  *
- *  corebird is free software: you can redistribute it and/or modify
+ *  nextbird is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
  *  (at your option) any later version.
  *
- *  corebird is distributed in the hope that it will be useful,
+ *  nextbird is distributed in the hope that it will be useful,
  *  but WITHOUT ANY WARRANTY; without even the implied warranty of
  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *  GNU General Public License for more details.
  *
  *  You should have received a copy of the GNU General Public License
- *  along with corebird.  If not, see <http://www.gnu.org/licenses/>.
+ *  along with nextbird.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 bool STRESSTEST = false;
 
-public class Corebird : Gtk.Application {
+public class Nextbird : Gtk.Application {
   public static Sql.Database db;
   public static Cb.SnippetManager snippet_manager;
   public signal void account_added (Account acc);
@@ -44,17 +44,17 @@ public class Corebird : Gtk.Application {
 
 
 
-  public Corebird () {
-    GLib.Object(application_id:   "de.lucaswerkmeister.corebird",
+  public Nextbird () {
+    GLib.Object(application_id:   "de.lucaswerkmeister.nextbird",
                 flags:            ApplicationFlags.HANDLES_COMMAND_LINE);
                 //register_session: true);
     active_accounts = new GLib.GenericArray<Account> ();
 
     /* Create the directories here already since the database below needs it */
     Dirs.create_dirs ();
-    db = new Sql.Database (Dirs.config ("Corebird.db"),
-                           Sql.COREBIRD_INIT_FILE,
-                           Sql.COREBIRD_SQL_VERSION);
+    db = new Sql.Database (Dirs.config ("Nextbird.db"),
+                           Sql.NEXTBIRD_INIT_FILE,
+                           Sql.NEXTBIRD_SQL_VERSION);
 
     snippet_manager = new Cb.SnippetManager (db.get_sqlite_db ());
   }
@@ -119,7 +119,7 @@ public class Corebird : Gtk.Application {
         /* Starting as a service adds an extra hold() */
         this.release ();
       } else {
-        warning ("--stop-service passed, but corebird has not been started as a service");
+        warning ("--stop-service passed, but nextbird has not been started as a service");
       }
     } else if (print_startup_accounts) {
       string[] startup_accounts = Settings.get ().get_strv ("startup-accounts");
@@ -188,21 +188,21 @@ public class Corebird : Gtk.Application {
   }
 
   private void show_shortcuts_activated () {
-    var builder = new Gtk.Builder.from_resource ("/de/lucaswerkmeister/corebird/ui/shortcuts-window.ui");
+    var builder = new Gtk.Builder.from_resource ("/de/lucaswerkmeister/nextbird/ui/shortcuts-window.ui");
     var shortcuts_window = (Gtk.Window) builder.get_object ("shortcuts_window");
     shortcuts_window.show ();
   }
 
   public override void startup () {
     base.startup ();
-    this.set_resource_base_path ("/de/lucaswerkmeister/corebird");
+    this.set_resource_base_path ("/de/lucaswerkmeister/nextbird");
 
     typeof (LazyMenuButton).ensure ();
     typeof (FavImageView).ensure ();
     typeof (Cb.EmojiChooser).ensure ();
 
 #if DEBUG
-    GLib.Environment.set_variable ("G_MESSAGES_DEBUG", "corebird", true);
+    GLib.Environment.set_variable ("G_MESSAGES_DEBUG", "nextbird", true);
 #endif
 
     debug ("startup");
